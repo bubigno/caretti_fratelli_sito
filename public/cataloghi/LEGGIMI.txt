@@ -1,0 +1,13 @@
+CARTELLA CATALOGHI
+===================
+
+Inserisci qui i file PDF dei cataloghi (es. coppe-trofei-2024.pdf).
+
+Per far comparire un catalogo scaricabile in una sezione dei Servizi:
+1. Copia il file PDF dentro questa cartella (public/cataloghi/).
+2. Comunicami il nome del file e a quale servizio associarlo,
+   oppure aggiungi manualmente una voce nell'elenco "cataloghi"
+   del servizio corrispondente nel file: app/servizi/servizi-data.ts
+
+Esempio di voce catalogo:
+  { nome: "Catalogo Coppe e Trofei 2024", file: "/cataloghi/coppe-trofei-2024.pdf" }

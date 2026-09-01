@@ -15,7 +15,7 @@ const contactInfo = [
     icon: MapPin,
     label: "Indirizzo",
     value: "Via Orsolani, 11 – 17025 Loano (SV)",
-    href: "",
+    href: "https://www.google.com/maps/search/?api=1&query=Caretti+F.lli+Via+Orsolani+11+17025+Loano+SV",
   },
   {
     icon: Phone,

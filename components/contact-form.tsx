@@ -6,15 +6,45 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
+const oggetti = [
+  "Premiazioni Sportive",
+  "Argenteria & Oreficeria",
+  "Abbigliamento da Lavoro & Antinfortunistica",
+  "Personalizzazione Abbigliamento",
+  "Oggettistica Pubblicitaria",
+  "Stampa su Grandi e Piccoli Formati",
+  "Cartellonistica & Targhe per Esterni",
+  "Decorazione Automezzi",
+  "Altro",
+];
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
-  const [formData, setFormData] = useState({ nome: "", email: "", messaggio: "" });
+  const [formData, setFormData] = useState({
+    nome: "",
+    email: "",
+    oggetto: "",
+    oggettoAltro: "",
+    messaggio: "",
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Visual-only form: just show success
     setSubmitted(true);
+  };
+
+  const resetForm = () => {
+    setSubmitted(false);
+    setFormData({ nome: "", email: "", oggetto: "", oggettoAltro: "", messaggio: "" });
   };
 
   if (submitted) {
@@ -27,14 +57,7 @@ export default function ContactForm() {
         <p className="text-muted-foreground text-sm">
           Grazie per averci contattato. Ti risponderemo il prima possibile.
         </p>
-        <Button
-          variant="outline"
-          className="mt-6"
-          onClick={() => {
-            setSubmitted(false);
-            setFormData({ nome: "", email: "", messaggio: "" });
-          }}
-        >
+        <Button variant="outline" className="mt-6" onClick={resetForm}>
           Invia un altro messaggio
         </Button>
       </div>
@@ -68,6 +91,41 @@ export default function ContactForm() {
           }
         />
       </div>
+      <div className="space-y-2">
+        <Label htmlFor="oggetto">Oggetto</Label>
+        <Select
+          value={formData.oggetto}
+          onValueChange={(v: string) =>
+            setFormData({ ...formData, oggetto: v, oggettoAltro: v === "Altro" ? formData.oggettoAltro : "" })
+          }
+          required
+        >
+          <SelectTrigger id="oggetto">
+            <SelectValue placeholder="Seleziona di cosa hai bisogno" />
+          </SelectTrigger>
+          <SelectContent>
+            {oggetti.map((o) => (
+              <SelectItem key={o} value={o}>
+                {o}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      </div>
+      {formData.oggetto === "Altro" && (
+        <div className="space-y-2">
+          <Label htmlFor="oggettoAltro">Specifica l'oggetto</Label>
+          <Input
+            id="oggettoAltro"
+            placeholder="Di cosa hai bisogno?"
+            required
+            value={formData.oggettoAltro}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setFormData({ ...formData, oggettoAltro: e.target.value })
+            }
+          />
+        </div>
+      )}
       <div className="space-y-2">
         <Label htmlFor="messaggio">Messaggio</Label>
         <Textarea
