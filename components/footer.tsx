@@ -9,9 +9,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Col 1 - Brand */}
           <div>
-            <h3 className="font-display text-lg font-bold tracking-tight mb-3">
-              Caretti F.lli Snc
-            </h3>
+            <div className="flex items-center gap-2.5 mb-3">
+              <img src="/logo.svg" alt="Logo Caretti F.lli" width={40} height={40} className="h-10 w-10 shrink-0" />
+              <h3 className="font-display text-lg font-bold tracking-tight">
+                Caretti F.lli Snc
+              </h3>
+            </div>
             <p className="text-sm opacity-80 leading-relaxed">
               Qualità e professionalità dal 1990. Argenteria, oreficeria, abbigliamento da lavoro, premiazioni sportive e materiale promozionale.
             </p>
@@ -46,7 +49,14 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-0.5 shrink-0 opacity-70" />
-                <span className="opacity-80">Via Orsolani, 11 – 17025 Loano (SV)</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Caretti+F.lli+Via+Orsolani+11+17025+Loano+SV"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="opacity-80 hover:opacity-100 hover:underline transition-opacity"
+                >
+                  Via Orsolani, 11 – 17025 Loano (SV)
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 shrink-0 opacity-70" />

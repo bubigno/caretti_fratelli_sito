@@ -6,12 +6,12 @@ import { Button } from "@/components/ui/button";
 import HomeAnimations from "@/components/home-animations";
 
 const services = [
-  { iconName: "Trophy", title: "Premiazioni Sportive", desc: "Coppe, trofei, medaglie e targhe per ogni competizione.", href: "/servizi" },
-  { iconName: "Gem", title: "Argenteria & Oreficeria", desc: "Prodotti di argenteria e oreficeria di alta qualità.", href: "/servizi" },
-  { iconName: "HardHat", title: "Abbigliamento da Lavoro", desc: "Abiti da lavoro, DPI e antinfortunistica professionale.", href: "/servizi" },
-  { iconName: "Shirt", title: "Personalizzazione", desc: "Serigrafia, ricami e transfer per ogni esigenza.", href: "/servizi" },
-  { iconName: "Gift", title: "Oggettistica Pubblicitaria", desc: "Gadget e materiale promozionale personalizzato.", href: "/servizi" },
-  { iconName: "Printer", title: "Stampa & Cartellonistica", desc: "Stampa digitale su grandi e piccoli formati.", href: "/servizi" },
+  { iconName: "Trophy", title: "Premiazioni Sportive", desc: "Coppe, trofei, medaglie e targhe per ogni competizione.", href: "/servizi?servizio=premiazioni-sportive" },
+  { iconName: "Gem", title: "Argenteria & Oreficeria", desc: "Prodotti di argenteria e oreficeria di alta qualità.", href: "/servizi?servizio=argenteria-oreficeria" },
+  { iconName: "HardHat", title: "Abbigliamento da Lavoro", desc: "Abiti da lavoro, DPI e antinfortunistica professionale.", href: "/servizi?servizio=abbigliamento-lavoro-antinfortunistica" },
+  { iconName: "Shirt", title: "Personalizzazione", desc: "Serigrafia, ricami e transfer per ogni esigenza.", href: "/servizi?servizio=personalizzazione-abbigliamento" },
+  { iconName: "Gift", title: "Oggettistica Pubblicitaria", desc: "Gadget e materiale promozionale personalizzato.", href: "/servizi?servizio=oggettistica-pubblicitaria" },
+  { iconName: "Printer", title: "Stampa & Cartellonistica", desc: "Stampa digitale su grandi e piccoli formati.", href: "/servizi?servizio=stampa-grandi-piccoli-formati" },
 ];
 
 const reasons = [
@@ -37,6 +37,18 @@ export default function HomePage() {
         </div>
         <Container size="lg">
           <div className="relative py-28 sm:py-36 lg:py-44 max-w-2xl">
+            <div className="flex items-center gap-3 mb-6">
+              <Image
+                src="/logo.svg"
+                alt="Logo Caretti F.lli"
+                width={56}
+                height={56}
+                className="h-14 w-14 shrink-0 drop-shadow-lg"
+              />
+              <span className="font-display text-2xl font-bold tracking-tight text-white">
+                Caretti F.lli
+              </span>
+            </div>
             <p className="text-sm font-medium uppercase tracking-widest text-amber-400 mb-4">
               Dal 1990 a Loano (SV)
             </p>

@@ -21,7 +21,14 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-lg">
       <div className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-4 sm:px-6">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2" onClick={() => setMobileOpen(false)}>
+        <Link href="/" className="flex items-center gap-2.5" onClick={() => setMobileOpen(false)}>
+          <img
+            src="/logo.svg"
+            alt="Logo Caretti F.lli"
+            width={40}
+            height={40}
+            className="h-10 w-10 shrink-0"
+          />
           <span className="font-display text-xl font-bold tracking-tight text-primary">
             Caretti F.lli
           </span>

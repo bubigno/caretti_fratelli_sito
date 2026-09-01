@@ -64,3 +64,9 @@
 html {
   scroll-behavior: smooth;
 }
+/* Hide the sticky header while a modal dialog is open so its translucent
+   overlay does not reveal the dimmed logo underneath (keeps focus on the modal). */
+body[data-scroll-locked] header {
+  visibility: hidden;
+  pointer-events: none;
+}

@@ -1,4 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-<rect width="256" height="256" fill="#1B2A4A"/>
-<path d="M85 80Q95 80 102 84T115 95T122 112T125 133Q125 148 122 160T113 180T99 193T80 198Q70 198 62 195T48 186L52 170Q58 175 65 178T78 181Q85 181 90 178T98 169T102 155T104 137Q104 123 102 113T96 97T87 88T75 85Q68 85 62 87T51 93L47 77Q54 72 63 76T85 80M115 195L119 211L175 211L171 195L155 195L155 85L171 85L175 69L119 69L115 85L131 85L131 195L115 195Z" fill="#C9A54E"/>
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Caretti F.lli - CR">
+  <defs>
+    <linearGradient id="fvNavy" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2A3E68"/>
+      <stop offset="1" stop-color="#131F38"/>
+    </linearGradient>
+    <linearGradient id="fvGold" x1="10" y1="10" x2="38" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8DE8B"/>
+      <stop offset="0.5" stop-color="#E6BA51"/>
+      <stop offset="1" stop-color="#C68F2B"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="48" height="48" rx="12" fill="url(#fvNavy)"/>
+  <path d="M27 16.4 C25.4 15.2 23.4 14.5 21.2 14.5 C15.9 14.5 11.7 18.7 11.7 24 C11.7 29.3 15.9 33.5 21.2 33.5 C23.4 33.5 25.4 32.8 27 31.6" stroke="url(#fvGold)" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+  <path d="M25.8 33.5 V14.7 H31.6 C34.7 14.7 37 16.9 37 19.9 C37 22.9 34.7 25 31.6 25 H25.8 M31.2 25 L37 33.5" stroke="url(#fvGold)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 </svg>
