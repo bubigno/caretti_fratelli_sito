@@ -1,6 +1,6 @@
 import { MapPin, Phone, Mail } from "lucide-react";
 import Link from "next/link";
-import CurrentYear from "@/components/current-year";
+
 
 export default function Footer() {
   return (
@@ -70,8 +70,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-primary-foreground/20 text-center text-xs opacity-60">
-          © <CurrentYear /> Caretti F.lli Snc – Tutti i diritti riservati
+        <div className="mt-10 pt-6 border-t border-primary-foreground/20 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs opacity-60">
+          <span>© 2026 Caretti Fratelli – P.IVA 01234567890</span>
+          <Link href="/privacy" className="hover:opacity-100 transition-opacity underline underline-offset-2">
+            Privacy Policy
+          </Link>
         </div>
       </div>
     </footer>
