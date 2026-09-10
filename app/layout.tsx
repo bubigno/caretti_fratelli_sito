@@ -5,8 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "sonner";
 import { ChunkLoadErrorHandler } from "@/components/chunk-load-error-handler";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+import SiteChrome from "@/components/site-chrome";
 
 export const dynamic = "force-dynamic";
 
@@ -66,9 +65,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <ChunkLoadErrorHandler />
-          <Navbar />
-          <main className="min-h-screen">{children}</main>
-          <Footer />
+          <SiteChrome>{children}</SiteChrome>
           <Toaster position="top-right" richColors />
         </ThemeProvider>
       </body>

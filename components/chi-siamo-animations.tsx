@@ -15,7 +15,19 @@ interface ValueItem {
   desc: string;
 }
 
-export default function ChiSiamoAnimations({ values }: { values: ValueItem[] }) {
+export default function ChiSiamoAnimations({
+  values,
+  storyTitle = "La Nostra Storia",
+  storyParagraphs = [],
+  valuesSectionEyebrow = "I Nostri Valori",
+  valuesSectionTitle = "Cosa Ci Guida",
+}: {
+  values: ValueItem[];
+  storyTitle?: string;
+  storyParagraphs?: string[];
+  valuesSectionEyebrow?: string;
+  valuesSectionTitle?: string;
+}) {
   const [storyRef, storyInView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [valuesRef, valuesInView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
@@ -30,26 +42,20 @@ export default function ChiSiamoAnimations({ values }: { values: ValueItem[] }) 
         className="py-16 max-w-3xl mx-auto"
       >
         <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight mb-6 text-center">
-          La Nostra Storia
+          {storyTitle}
         </h2>
         <div className="space-y-4 text-muted-foreground leading-relaxed">
-          <p>
-            Fondata nel 1990 a <strong className="text-foreground">Loano</strong>, in provincia di Savona, Caretti F.lli Snc nasce dalla passione e dall'intraprendenza dei fratelli Caretti, con l'obiettivo di offrire un servizio completo e di qualità nel settore dell'argenteria, dell'oreficeria e delle premiazioni sportive.
-          </p>
-          <p>
-            Nel corso degli anni, l'azienda ha ampliato la propria offerta includendo <strong className="text-foreground">abbigliamento da lavoro e antinfortunistica</strong>, personalizzazione di capi tramite serigrafia e ricamo, oggettistica pubblicitaria, stampa su grandi e piccoli formati, cartellonistica e decorazione automezzi.
-          </p>
-          <p>
-            Oggi, con oltre <strong className="text-foreground">30 anni di esperienza</strong>, serviamo con orgoglio aziende, enti, istituzioni, squadre sportive, rivenditori e privati in tutta la Liguria e oltre, mantenendo sempre al centro la qualità del prodotto e la soddisfazione del cliente.
-          </p>
+          {storyParagraphs.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
         </div>
       </motion.div>
 
       {/* Values */}
       <div ref={valuesRef} className="py-16">
         <div className="text-center mb-12">
-          <p className="text-sm font-medium uppercase tracking-widest text-secondary mb-2">I Nostri Valori</p>
-          <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight">Cosa Ci Guida</h2>
+          <p className="text-sm font-medium uppercase tracking-widest text-secondary mb-2">{valuesSectionEyebrow}</p>
+          <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight">{valuesSectionTitle}</h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {(values ?? []).map((value: ValueItem, i: number) => {

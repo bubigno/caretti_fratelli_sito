@@ -24,12 +24,29 @@ interface ReasonItem {
   desc: string;
 }
 
+interface CtaContent {
+  title: string;
+  description: string;
+  buttonLabel: string;
+  buttonHref: string;
+}
+
 export default function HomeAnimations({
   services,
   reasons,
+  servicesSectionEyebrow = "I Nostri Servizi",
+  servicesSectionTitle = "Cosa Offriamo",
+  reasonsSectionEyebrow = "I Nostri Punti di Forza",
+  reasonsSectionTitle = "Perché Sceglierci",
+  cta,
 }: {
   services: ServiceItem[];
   reasons: ReasonItem[];
+  servicesSectionEyebrow?: string;
+  servicesSectionTitle?: string;
+  reasonsSectionEyebrow?: string;
+  reasonsSectionTitle?: string;
+  cta?: CtaContent;
 }) {
   const [servicesRef, servicesInView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [reasonsRef, reasonsInView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -40,8 +57,8 @@ export default function HomeAnimations({
       {/* Services Section */}
       <div ref={servicesRef} className="py-16">
         <div className="text-center mb-12">
-          <p className="text-sm font-medium uppercase tracking-widest text-secondary mb-2">I Nostri Servizi</p>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">Cosa Offriamo</h2>
+          <p className="text-sm font-medium uppercase tracking-widest text-secondary mb-2">{servicesSectionEyebrow}</p>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">{servicesSectionTitle}</h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {(services ?? []).map((service: ServiceItem, i: number) => {
@@ -77,8 +94,8 @@ export default function HomeAnimations({
       {/* Perché sceglierci */}
       <div ref={reasonsRef} className="py-16">
         <div className="text-center mb-12">
-          <p className="text-sm font-medium uppercase tracking-widest text-secondary mb-2">I Nostri Punti di Forza</p>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">Perché Sceglierci</h2>
+          <p className="text-sm font-medium uppercase tracking-widest text-secondary mb-2">{reasonsSectionEyebrow}</p>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">{reasonsSectionTitle}</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {(reasons ?? []).map((reason: ReasonItem, i: number) => {
@@ -116,14 +133,15 @@ export default function HomeAnimations({
       >
         <div className="rounded-2xl bg-primary p-8 sm:p-12 text-center text-primary-foreground">
           <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight mb-4">
-            Hai un progetto in mente?
+            {cta?.title ?? "Hai un progetto in mente?"}
           </h2>
           <p className="text-sm opacity-80 max-w-lg mx-auto mb-6">
-            Contattaci per un preventivo gratuito. Siamo a tua disposizione per qualsiasi esigenza di personalizzazione, premiazione o abbigliamento professionale.
+            {cta?.description ??
+              "Contattaci per un preventivo gratuito. Siamo a tua disposizione per qualsiasi esigenza di personalizzazione, premiazione o abbigliamento professionale."}
           </p>
           <Button asChild size="lg" className="bg-amber-500 hover:bg-amber-600 text-gray-900 font-semibold">
-            <Link href="/contatti">
-              Richiedi un Preventivo <ArrowRight className="h-4 w-4 ml-2" />
+            <Link href={cta?.buttonHref ?? "/contatti"}>
+              {cta?.buttonLabel ?? "Richiedi un Preventivo"} <ArrowRight className="h-4 w-4 ml-2" />
             </Link>
           </Button>
         </div>

@@ -1,0 +1,391 @@
+{
+  "home": {
+    "hero": {
+      "brand": "Caretti F.lli",
+      "eyebrow": "Dal 1990 a Loano (SV)",
+      "titlePrefix": "Qualità e",
+      "titleHighlight": "Professionalità",
+      "description": "Argenteria, oreficeria, abbigliamento da lavoro, premiazioni sportive e materiale promozionale per aziende, enti e privati.",
+      "image": "https://images.pexels.com/photos/30689698/pexels-photo-30689698/free-photo-of-elegant-trophy-display-in-a-glass-case.jpeg",
+      "imageAlt": "Elegante esposizione di trofei e coppe dorate",
+      "primaryCtaLabel": "Scopri i Servizi",
+      "primaryCtaHref": "/servizi",
+      "secondaryCtaLabel": "Contattaci",
+      "secondaryCtaHref": "/contatti"
+    },
+    "servicesSectionEyebrow": "I Nostri Servizi",
+    "servicesSectionTitle": "Cosa Offriamo",
+    "services": [
+      {
+        "iconName": "Trophy",
+        "title": "Premiazioni Sportive",
+        "desc": "Coppe, trofei, medaglie e targhe per ogni competizione.",
+        "href": "/servizi?servizio=premiazioni-sportive"
+      },
+      {
+        "iconName": "Gem",
+        "title": "Argenteria & Oreficeria",
+        "desc": "Prodotti di argenteria e oreficeria di alta qualità.",
+        "href": "/servizi?servizio=argenteria-oreficeria"
+      },
+      {
+        "iconName": "HardHat",
+        "title": "Abbigliamento da Lavoro",
+        "desc": "Abiti da lavoro, DPI e antinfortunistica professionale.",
+        "href": "/servizi?servizio=abbigliamento-lavoro-antinfortunistica"
+      },
+      {
+        "iconName": "Shirt",
+        "title": "Personalizzazione",
+        "desc": "Serigrafia, ricami e transfer per ogni esigenza.",
+        "href": "/servizi?servizio=personalizzazione-abbigliamento"
+      },
+      {
+        "iconName": "Gift",
+        "title": "Oggettistica Pubblicitaria",
+        "desc": "Gadget e materiale promozionale personalizzato.",
+        "href": "/servizi?servizio=oggettistica-pubblicitaria"
+      },
+      {
+        "iconName": "Printer",
+        "title": "Stampa & Cartellonistica",
+        "desc": "Stampa digitale su grandi e piccoli formati.",
+        "href": "/servizi?servizio=stampa-grandi-piccoli-formati"
+      }
+    ],
+    "reasonsSectionEyebrow": "I Nostri Punti di Forza",
+    "reasonsSectionTitle": "Perché Sceglierci",
+    "reasons": [
+      {
+        "iconName": "Clock",
+        "title": "30+ Anni di Esperienza",
+        "desc": "Dal 1990 al servizio di aziende, enti e privati con professionalità."
+      },
+      {
+        "iconName": "Star",
+        "title": "Qualità Garantita",
+        "desc": "Materiali selezionati e lavorazioni accurate per risultati eccellenti."
+      },
+      {
+        "iconName": "Users",
+        "title": "Servizio Personalizzato",
+        "desc": "Consulenza dedicata per trovare la soluzione ideale per ogni esigenza."
+      }
+    ],
+    "cta": {
+      "title": "Hai un progetto in mente?",
+      "description": "Contattaci per un preventivo gratuito. Siamo a tua disposizione per qualsiasi esigenza di personalizzazione, premiazione o abbigliamento professionale.",
+      "buttonLabel": "Richiedi un Preventivo",
+      "buttonHref": "/contatti"
+    }
+  },
+  "chiSiamo": {
+    "header": {
+      "eyebrow": "La Nostra Storia",
+      "title": "Chi Siamo",
+      "description": "Da oltre 30 anni, Caretti F.lli Snc è sinonimo di qualità e professionalità nel cuore della Liguria."
+    },
+    "storyTitle": "La Nostra Storia",
+    "storyParagraphs": [
+      "Fondata nel 1990 a Loano, in provincia di Savona, Caretti F.lli Snc nasce dalla passione e dall'intraprendenza dei fratelli Caretti, con l'obiettivo di offrire un servizio completo e di qualità nel settore dell'argenteria, dell'oreficeria e delle premiazioni sportive.",
+      "Nel corso degli anni, l'azienda ha ampliato la propria offerta includendo abbigliamento da lavoro e antinfortunistica, personalizzazione di capi tramite serigrafia e ricamo, oggettistica pubblicitaria, stampa su grandi e piccoli formati, cartellonistica e decorazione automezzi.",
+      "Oggi, con oltre 30 anni di esperienza, serviamo con orgoglio aziende, enti, istituzioni, squadre sportive, rivenditori e privati in tutta la Liguria e oltre, mantenendo sempre al centro la qualità del prodotto e la soddisfazione del cliente."
+    ],
+    "valuesSectionEyebrow": "I Nostri Valori",
+    "valuesSectionTitle": "Cosa Ci Guida",
+    "values": [
+      {
+        "iconName": "Award",
+        "title": "Eccellenza",
+        "desc": "Selezioniamo solo i migliori materiali e le migliori tecniche per garantire risultati di altissima qualità."
+      },
+      {
+        "iconName": "Heart",
+        "title": "Passione",
+        "desc": "Ogni progetto viene seguito con dedizione e cura artigianale, come se fosse unico."
+      },
+      {
+        "iconName": "Handshake",
+        "title": "Affidabilità",
+        "desc": "Rapporti duraturi costruiti sulla fiducia, la trasparenza e il rispetto dei tempi di consegna."
+      },
+      {
+        "iconName": "Target",
+        "title": "Personalizzazione",
+        "desc": "Soluzioni su misura per ogni cliente, dall'idea alla realizzazione del prodotto finale."
+      }
+    ]
+  },
+  "servizi": {
+    "header": {
+      "eyebrow": "Le Nostre Competenze",
+      "title": "I Nostri Servizi",
+      "description": "Un'offerta completa per soddisfare ogni esigenza: dalle premiazioni sportive all'abbigliamento professionale, dalla stampa alla personalizzazione. Clicca su un servizio per scoprire dettagli, foto e cataloghi."
+    },
+    "items": [
+      {
+        "slug": "premiazioni-sportive",
+        "title": "Premiazioni Sportive",
+        "desc": "Coppe, trofei, medaglie, targhe, soggetti in resina e trofei in vetro per premiazioni di ogni tipo.",
+        "longDesc": "Da oltre 30 anni realizziamo premiazioni per società e squadre sportive, tornei, competizioni ed eventi aziendali. Offriamo un'ampia gamma di articoli — dalle coppe classiche ai trofei di design — tutti personalizzabili con incisioni, loghi e dediche. Diverse società e squadre sportive si affidano ai nostri lavori per le premiazioni di ogni tipo.",
+        "image": "/servizi/premiazioni-hero.jpg",
+        "alt": "Esposizione di trofei, targhe e premiazioni in negozio",
+        "features": [
+          "Coppe e trofei classici e di design",
+          "Medaglie personalizzate",
+          "Targhe e piatti ricordo",
+          "Soggetti in resina",
+          "Trofei in vetro e cristallo",
+          "Incisioni e personalizzazioni su misura"
+        ],
+        "gallery": [
+          {
+            "src": "/servizi/premiazioni-r1.jpg",
+            "alt": "Coppe e trofei in oro e argento sugli scaffali"
+          },
+          {
+            "src": "/servizi/premiazioni-r2.jpg",
+            "alt": "Trofei e coppe di vari formati e colori"
+          },
+          {
+            "src": "/servizi/premiazioni-r3.jpg",
+            "alt": "Trofei, targhe e piatti ricordo in esposizione"
+          }
+        ],
+        "cataloghi": []
+      },
+      {
+        "slug": "argenteria-oreficeria",
+        "title": "Argenteria & Oreficeria",
+        "desc": "Prodotti di argenteria e oreficeria di qualità, selezionati con cura per eleganza e raffinatezza.",
+        "longDesc": "Una selezione curata di articoli di argenteria e oreficeria di pregio, ideali per regali, cerimonie, anniversari e occasioni speciali. Oggetti eleganti e raffinati per chi cerca qualità e stile senza tempo.",
+        "image": "/servizi/argenteria-hero.jpg",
+        "alt": "Articoli da regalo e argenteria in esposizione",
+        "features": [
+          "Oggettistica in argento",
+          "Gioielli in oro",
+          "Articoli da regalo di pregio",
+          "Idee per cerimonie e ricorrenze"
+        ],
+        "gallery": [
+          {
+            "src": "/servizi/argenteria-r1.jpg",
+            "alt": "Piatto in argento e articoli di pregio"
+          },
+          {
+            "src": "/servizi/argenteria-r2.jpg",
+            "alt": "Cornici e oggettistica in argento in esposizione"
+          },
+          {
+            "src": "/servizi/argenteria-r3.jpg",
+            "alt": "Articoli in argento e cristallo da regalo"
+          }
+        ],
+        "cataloghi": []
+      },
+      {
+        "slug": "abbigliamento-lavoro-antinfortunistica",
+        "title": "Abbigliamento da Lavoro & Antinfortunistica",
+        "desc": "Abiti da lavoro, DPI e abbigliamento tempo libero: soluzioni complete per sicurezza e comfort.",
+        "longDesc": "Forniamo abbigliamento professionale da lavoro, dispositivi di protezione individuale (DPI) e capi per il tempo libero. Soluzioni complete e certificate per garantire sicurezza, comfort e resistenza sul posto di lavoro, con possibilità di personalizzazione con il logo aziendale.",
+        "image": "/servizi/lavoro-1.jpg",
+        "alt": "Abbigliamento da lavoro e dispositivi di sicurezza",
+        "features": [
+          "Tute e capi da lavoro",
+          "Abbigliamento alta visibilità",
+          "Dispositivi di protezione individuale (DPI)",
+          "Calzature antinfortunistiche",
+          "Abbigliamento tempo libero",
+          "Personalizzazione con logo aziendale"
+        ],
+        "gallery": [
+          {
+            "src": "/servizi/lavoro-2.webp",
+            "alt": "Indumenti alta visibilità per cantiere"
+          },
+          {
+            "src": "/servizi/lavoro-3.jpg",
+            "alt": "Capo da lavoro alta visibilità"
+          }
+        ],
+        "cataloghi": []
+      },
+      {
+        "slug": "personalizzazione-abbigliamento",
+        "title": "Personalizzazione Abbigliamento",
+        "desc": "Serigrafia fino a 5 colori, termosaldatura, transfer a colori e ricami personalizzati.",
+        "longDesc": "Trasformiamo capi ordinari in strumenti di comunicazione e identità aziendale. Personalizziamo abbigliamento sportivo, promozionale e da lavoro con diverse tecniche, scegliendo di volta in volta la soluzione migliore per resa e durata.",
+        "image": "/servizi/personalizzazione-1.jpg",
+        "alt": "Serigrafia e ricamo su abbigliamento personalizzato",
+        "features": [
+          "Serigrafia fino a 5 colori",
+          "Termosaldatura a intaglio e a stampa digitale",
+          "Transfer a colori",
+          "Ricami personalizzati",
+          "Abbigliamento sportivo, promozionale e da lavoro"
+        ],
+        "gallery": [
+          {
+            "src": "/servizi/personalizzazione-2.jpg",
+            "alt": "Stampa su polo personalizzate"
+          },
+          {
+            "src": "/servizi/personalizzazione-3.jpg",
+            "alt": "Ricamo personalizzato su abbigliamento"
+          }
+        ],
+        "cataloghi": []
+      },
+      {
+        "slug": "oggettistica-pubblicitaria",
+        "title": "Oggettistica Pubblicitaria",
+        "desc": "Gadget e oggetti personalizzati per promuovere la tua azienda: penne, tazze, portachiavi e altro.",
+        "longDesc": "Materiale promozionale efficace per fiere, eventi e campagne di marketing. Realizziamo gadget e oggetti personalizzati con il tuo logo, per aumentare la visibilità del tuo brand e lasciare un ricordo tangibile a clienti e partner.",
+        "image": "/servizi/oggettistica-1.jpg",
+        "alt": "Gadget promozionali e oggettistica pubblicitaria aziendale",
+        "features": [
+          "Penne, tazze e borracce brandizzate",
+          "Portachiavi personalizzati",
+          "Gadget per fiere ed eventi",
+          "Materiale promozionale su misura",
+          "Personalizzazione con logo"
+        ],
+        "gallery": [
+          {
+            "src": "/servizi/oggettistica-2.png",
+            "alt": "Tazze aziendali personalizzate"
+          },
+          {
+            "src": "/servizi/oggettistica-3.png",
+            "alt": "Portachiavi personalizzati"
+          }
+        ],
+        "cataloghi": []
+      },
+      {
+        "slug": "stampa-grandi-piccoli-formati",
+        "title": "Stampa su Grandi e Piccoli Formati",
+        "desc": "Stampa digitale professionale: striscioni, banner, adesivi e tele pittoriche.",
+        "longDesc": "Dal piccolo formato per etichette e adesivi al grande formato per allestimenti fieristici e decorazioni. Offriamo stampa digitale professionale con risultati di alta qualità su un'ampia varietà di supporti e materiali.",
+        "image": "/servizi/stampa-1.jpg",
+        "alt": "Stampa digitale su grande formato",
+        "features": [
+          "Stampa digitale",
+          "Striscioni pubblicitari",
+          "Banner pubblicitari",
+          "Adesivi",
+          "Carte e tele pittoriche"
+        ],
+        "gallery": [
+          {
+            "src": "/servizi/stampa-2.jpg",
+            "alt": "Stampa digitale grande formato"
+          },
+          {
+            "src": "/servizi/stampa-3.jpg",
+            "alt": "Striscioni pubblicitari personalizzati"
+          }
+        ],
+        "cataloghi": []
+      },
+      {
+        "slug": "cartellonistica-targhe",
+        "title": "Cartellonistica & Targhe per Esterni",
+        "desc": "Cartelli, insegne e targhe per esterni in vari materiali: soluzioni durevoli e professionali.",
+        "longDesc": "Realizziamo cartelli, insegne e targhe per esterni in diversi materiali (metallo, plexiglass e altro). Soluzioni durevoli e professionali per identificare la tua attività e comunicare al meglio la tua immagine.",
+        "image": "/servizi/targhe-1.jpg",
+        "alt": "Targhe e insegne professionali per esterni",
+        "features": [
+          "Insegne per negozi e attività",
+          "Targhe in metallo e plexiglass",
+          "Cartelli pubblicitari per esterni",
+          "Materiali resistenti agli agenti atmosferici"
+        ],
+        "gallery": [
+          {
+            "src": "/servizi/targhe-2.jpg",
+            "alt": "Targhe personalizzate"
+          },
+          {
+            "src": "/servizi/targhe-3.jpg",
+            "alt": "Targhe da parete in plexiglass"
+          }
+        ],
+        "cataloghi": []
+      },
+      {
+        "slug": "decorazione-automezzi",
+        "title": "Decorazione Automezzi",
+        "desc": "Personalizzazione e decorazione di veicoli aziendali con adesivi, wrapping e grafiche su misura.",
+        "longDesc": "Trasforma il tuo mezzo in un potente strumento pubblicitario in movimento. Realizziamo car wrapping, adesivi e grafiche su misura per veicoli aziendali e flotte, per dare visibilità al tuo brand ovunque tu vada.",
+        "image": "/servizi/automezzi-1.jpg",
+        "alt": "Veicolo aziendale con decorazione grafica personalizzata",
+        "features": [
+          "Car wrapping",
+          "Adesivi e grafiche su misura",
+          "Decorazione furgoni e flotte aziendali",
+          "Loghi e scritte pubblicitarie"
+        ],
+        "gallery": [
+          {
+            "src": "/servizi/automezzi-2.png",
+            "alt": "Decorazione automezzi e flotte"
+          },
+          {
+            "src": "/servizi/automezzi-3.webp",
+            "alt": "Car wrapping con grafiche"
+          }
+        ],
+        "cataloghi": []
+      }
+    ]
+  },
+  "contatti": {
+    "header": {
+      "eyebrow": "Siamo Qui Per Te",
+      "title": "Contattaci",
+      "description": "Hai bisogno di un preventivo o di maggiori informazioni? Scrivici o vieni a trovarci nel nostro punto vendita a Loano."
+    },
+    "infoTitle": "Dove Trovarci",
+    "contactInfo": [
+      {
+        "icon": "MapPin",
+        "label": "Indirizzo",
+        "value": "Via Orsolani, 11 – 17025 Loano (SV)",
+        "href": "https://www.google.com/maps/search/?api=1&query=Caretti+F.lli+Via+Orsolani+11+17025+Loano+SV"
+      },
+      {
+        "icon": "Phone",
+        "label": "Telefono",
+        "value": "+39 019 673085",
+        "href": "tel:+39019673085"
+      },
+      {
+        "icon": "Phone",
+        "label": "Cellulare",
+        "value": "+39 347 375 4784",
+        "href": "tel:+393473754784"
+      },
+      {
+        "icon": "Mail",
+        "label": "Email",
+        "value": "info@carettifratelli.it",
+        "href": "mailto:info@carettifratelli.it"
+      },
+      {
+        "icon": "Instagram",
+        "label": "Instagram",
+        "value": "@c.r_coppe_",
+        "href": "https://www.instagram.com/c.r_coppe_/"
+      }
+    ],
+    "orariTitle": "Orari di Apertura",
+    "orari": [
+      "Lunedì – Venerdì: 8:30 – 12:30 / 15:00 – 19:00",
+      "Sabato: 9:00 – 12:30",
+      "Domenica: Chiuso"
+    ],
+    "formTitle": "Scrivici",
+    "formDescription": "Compila il modulo e ti risponderemo il prima possibile."
+  }
+}
