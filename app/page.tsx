@@ -6,9 +6,12 @@ import { Button } from "@/components/ui/button";
 import HomeAnimations from "@/components/home-animations";
 import { getContent } from "@/lib/content";
 
-export default function HomePage() {
-  const { home } = getContent();
+export const dynamic = "force-dynamic";
+
+export default async function HomePage() {
+  const { home } = await getContent();
   const hero = home.hero;
+  const gallery = home.gallery ?? [];
 
   return (
     <>
@@ -75,6 +78,35 @@ export default function HomePage() {
           />
         </Container>
       </Section>
+
+      {/* Galleria immagini */}
+      {gallery.length > 0 && (
+        <Section className="bg-muted/40">
+          <Container size="lg">
+            <div className="text-center mb-10">
+              <p className="text-sm font-medium uppercase tracking-widest text-amber-500 mb-3">
+                Galleria
+              </p>
+              <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
+                Le nostre immagini
+              </h2>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+              {gallery.map((src, i) => (
+                <div key={src + i} className="relative aspect-square overflow-hidden rounded-lg shadow-sm">
+                  <Image
+                    src={src}
+                    alt={`Immagine galleria ${i + 1}`}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                    unoptimized
+                  />
+                </div>
+              ))}
+            </div>
+          </Container>
+        </Section>
+      )}
     </>
   );
 }

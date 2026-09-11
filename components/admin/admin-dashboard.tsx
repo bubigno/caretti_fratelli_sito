@@ -14,8 +14,9 @@ import {
   XCircle,
   ExternalLink,
 } from "lucide-react";
-import type { SiteContent } from "@/lib/content-types";
-import { TextField, TextAreaField, ImageField } from "./fields";
+import type { ContentData } from "@/lib/content-types";
+import { TextField, TextAreaField, ImageField, GalleryField } from "./fields";
+import ServiziManager from "./servizi-manager";
 
 type SectionKey = "home" | "chiSiamo" | "servizi" | "contatti";
 
@@ -31,9 +32,9 @@ function clone<T>(v: T): T {
   return JSON.parse(JSON.stringify(v));
 }
 
-export default function AdminDashboard({ initialContent }: { initialContent: SiteContent }) {
+export default function AdminDashboard({ initialContent }: { initialContent: ContentData }) {
   const router = useRouter();
-  const [content, setContent] = useState<SiteContent>(initialContent);
+  const [content, setContent] = useState<ContentData>(initialContent);
   const [active, setActive] = useState<SectionKey>("home");
   const [saving, setSaving] = useState(false);
   const [feedback, setFeedback] = useState<{ type: "success" | "error"; msg: string } | null>(null);
@@ -68,7 +69,7 @@ export default function AdminDashboard({ initialContent }: { initialContent: Sit
   }
 
   // Helper per aggiornare una sezione mantenendo l'immutabilità.
-  function update(mutator: (draft: SiteContent) => void) {
+  function update(mutator: (draft: ContentData) => void) {
     setContent((prev) => {
       const draft = clone(prev);
       mutator(draft);
@@ -158,7 +159,7 @@ export default function AdminDashboard({ initialContent }: { initialContent: Sit
         <div className="flex-1 p-6 max-w-4xl w-full">
           {active === "home" && <HomeSection content={content} update={update} />}
           {active === "chiSiamo" && <ChiSiamoSection content={content} update={update} />}
-          {active === "servizi" && <ServiziSection content={content} update={update} />}
+          {active === "servizi" && <ServiziManager />}
           {active === "contatti" && <ContattiSection content={content} update={update} />}
         </div>
       </div>
@@ -178,8 +179,8 @@ function Card({ title, children }: { title: string; children: React.ReactNode })
 }
 
 type SectionProps = {
-  content: SiteContent;
-  update: (mutator: (draft: SiteContent) => void) => void;
+  content: ContentData;
+  update: (mutator: (draft: ContentData) => void) => void;
 };
 
 /* ---------------- HOME ---------------- */
@@ -235,6 +236,15 @@ function HomeSection({ content, update }: SectionProps) {
           <TextField label="Pulsante - Link" value={h.cta.buttonHref} onChange={(v) => update((d) => { d.home.cta.buttonHref = v; })} />
         </div>
       </Card>
+
+      <Card title="Galleria fotografica (Home)">
+        <GalleryField
+          label="Immagini della galleria"
+          hint="Le foto vengono mostrate nella sezione 'Galleria' della home. Aggiungi o rimuovi liberamente."
+          value={h.gallery ?? []}
+          onChange={(paths) => update((d) => { d.home.gallery = paths; })}
+        />
+      </Card>
     </>
   );
 }
@@ -273,30 +283,15 @@ function ChiSiamoSection({ content, update }: SectionProps) {
           </div>
         ))}
       </Card>
-    </>
-  );
-}
 
-/* ---------------- SERVIZI ---------------- */
-function ServiziSection({ content, update }: SectionProps) {
-  const s = content.servizi;
-  return (
-    <>
-      <Card title="Intestazione">
-        <TextField label="Sopratitolo" value={s.header.eyebrow} onChange={(v) => update((d) => { d.servizi.header.eyebrow = v; })} />
-        <TextField label="Titolo" value={s.header.title} onChange={(v) => update((d) => { d.servizi.header.title = v; })} />
-        <TextAreaField label="Descrizione" value={s.header.description} onChange={(v) => update((d) => { d.servizi.header.description = v; })} />
+      <Card title="Galleria fotografica (Chi Siamo)">
+        <GalleryField
+          label="Immagini della galleria"
+          hint="Le foto vengono mostrate nella sezione 'Galleria' della pagina Chi Siamo. Aggiungi o rimuovi liberamente."
+          value={c.gallery ?? []}
+          onChange={(paths) => update((d) => { d.chiSiamo.gallery = paths; })}
+        />
       </Card>
-
-      {s.items.map((item, i) => (
-        <Card key={item.slug} title={`Servizio: ${item.title}`}>
-          <TextField label="Titolo" value={item.title} onChange={(v) => update((d) => { d.servizi.items[i].title = v; })} />
-          <TextAreaField label="Descrizione breve" rows={2} value={item.desc} onChange={(v) => update((d) => { d.servizi.items[i].desc = v; })} />
-          <TextAreaField label="Descrizione estesa" rows={4} value={item.longDesc} onChange={(v) => update((d) => { d.servizi.items[i].longDesc = v; })} />
-          <ImageField label="Immagine principale" value={item.image} onChange={(v) => update((d) => { d.servizi.items[i].image = v; })} />
-          <TextField label="Testo immagine (alt)" value={item.alt} onChange={(v) => update((d) => { d.servizi.items[i].alt = v; })} />
-        </Card>
-      ))}
     </>
   );
 }

@@ -8,7 +8,7 @@ export const metadata = {
   robots: { index: false, follow: false },
 };
 
-export default function AdminPage() {
-  const content = getContent();
+export default async function AdminPage() {
+  const content = await getContent();
   return <AdminDashboard initialContent={content} />;
 }

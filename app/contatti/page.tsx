@@ -19,8 +19,10 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Clock,
 };
 
-export default function ContattiPage() {
-  const { contatti } = getContent();
+export const dynamic = "force-dynamic";
+
+export default async function ContattiPage() {
+  const { contatti } = await getContent();
 
   return (
     <>

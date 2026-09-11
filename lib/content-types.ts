@@ -43,6 +43,8 @@ export interface HomeContent {
   reasonsSectionTitle: string;
   reasons: ReasonCard[];
   cta: HomeCta;
+  // Galleria fotografica opzionale mostrata nella home.
+  gallery?: string[];
 }
 
 export interface SectionHeader {
@@ -64,6 +66,8 @@ export interface ChiSiamoContent {
   valuesSectionEyebrow: string;
   valuesSectionTitle: string;
   values: ValueCard[];
+  // Galleria fotografica opzionale mostrata nella pagina Chi Siamo.
+  gallery?: string[];
 }
 
 export interface GalleryImage {
@@ -116,3 +120,28 @@ export interface SiteContent {
   servizi: ServiziContent;
   contatti: ContattiContent;
 }
+
+/**
+ * Contenuti memorizzati nella tabella `site_content` di Supabase.
+ * I servizi NON sono qui: sono gestiti nella tabella dedicata `servizi`.
+ */
+export interface ContentData {
+  home: HomeContent;
+  chiSiamo: ChiSiamoContent;
+  contatti: ContattiContent;
+}
+
+/**
+ * Rappresenta una riga della tabella `servizi` di Supabase.
+ * `foto` è un array di URL pubblici (Supabase Storage o percorsi locali).
+ */
+export interface Servizio {
+  id: string;
+  nome: string;
+  descrizione: string;
+  icona: string;
+  ordine: number;
+  foto: string[];
+  created_at?: string;
+}
+

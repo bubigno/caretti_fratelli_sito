@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { getContent, saveContent } from "@/lib/content";
 import { SESSION_COOKIE, verifySessionToken } from "@/lib/auth";
-import type { SiteContent } from "@/lib/content-types";
+import type { ContentData } from "@/lib/content-types";
 
 export const runtime = "nodejs";
 
@@ -19,7 +19,7 @@ export async function GET() {
     return NextResponse.json({ success: false, message: "Non autorizzato." }, { status: 401 });
   }
   try {
-    const content = getContent();
+    const content = await getContent();
     return NextResponse.json({ success: true, content });
   } catch {
     return NextResponse.json(
@@ -29,25 +29,21 @@ export async function GET() {
   }
 }
 
-// POST: salva l'intero oggetto contenuti (protetta).
+// POST: salva i contenuti (Home, Chi Siamo, Contatti) su Supabase (protetta).
 export async function POST(request: Request) {
   if (!(await isAuthenticated())) {
     return NextResponse.json({ success: false, message: "Non autorizzato." }, { status: 401 });
   }
   try {
-    const body = (await request.json()) as { content?: SiteContent };
+    const body = (await request.json()) as { content?: ContentData };
     if (!body?.content) {
-      return NextResponse.json(
-        { success: false, message: "Dati mancanti." },
-        { status: 400 }
-      );
+      return NextResponse.json({ success: false, message: "Dati mancanti." }, { status: 400 });
     }
-    saveContent(body.content);
+    await saveContent(body.content);
     return NextResponse.json({ success: true, message: "Modifiche salvate con successo." });
-  } catch {
-    return NextResponse.json(
-      { success: false, message: "Errore durante il salvataggio delle modifiche." },
-      { status: 500 }
-    );
+  } catch (err) {
+    const message =
+      err instanceof Error ? err.message : "Errore durante il salvataggio delle modifiche.";
+    return NextResponse.json({ success: false, message }, { status: 500 });
   }
 }
